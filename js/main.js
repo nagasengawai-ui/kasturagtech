@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-```
 /* =============================
    Mobile Menu Toggle
 ============================= */
@@ -132,10 +131,15 @@ $('a[href*="#"]').on('click', function (e) {
         $('html, body').animate({
             scrollTop: $(hash).offset().top
         }, 500);
-
     }
 
 });
-```
 
+});
+
+/* =============================
+   Page Loader
+============================= */
+$(window).on("load", function(){
+    $("#loader").fadeOut();
 });
