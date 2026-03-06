@@ -95,6 +95,30 @@ body{
     background: #00bfff;
 }
 
+
+
+
+.whatsapp-float{
+position:fixed;
+width:60px;
+height:60px;
+bottom:25px;
+right:25px;
+background:#25d366;
+color:#fff;
+border-radius:50%;
+text-align:center;
+font-size:30px;
+line-height:60px;
+z-index:100;
+box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float:hover{
+background:#20ba5a;
+color:white;
+}
+
 .header{
     display: flex;
     align-items: center;
