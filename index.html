@@ -1,662 +1,623 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="google-site-verification" content="HCORdCkFOf8fBroGPEh3DC6AR_ZJVU70phF6rm8cAlc" />
+  
+  <!-- SEO & Primary Meta -->
+  <title>Tekzzo IT Solutions | Innovative Web, Mobile & Software Agency</title>
+  <meta name="description" content="Tekzzo IT Solutions delivers next-gen web development, mobile apps, enterprise software, and digital marketing. Modern, scalable, and results-driven IT startup.">
+  <meta name="keywords" content="Tekzzo IT Solutions, Web Development, Mobile App Development, Software Company, Digital Marketing, IT Startup, Nashik">
+  <meta name="author" content="Tekzzo IT Solutions">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tekzzoitsolutions.netlify.app">
+  <link rel="icon" type="image/png" href="./images/image.png">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Tekzzo IT Solutions – Future-ready Digital Solutions">
+  <meta property="og:description" content="We build high-performance web & mobile apps, software, and growth-driven digital strategies.">
+  <meta property="og:image" content="./images/image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tekzzo IT Solutions">
+  <meta name="twitter:description" content="Modern software & creative tech partner for startups & enterprises.">
 
-<meta name="google-site-verification" content="HCORdCkFOf8fBroGPEh3DC6AR_ZJVU70phF6rm8cAlc" />
+  <!-- CSS / Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
 
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    body {
+      background: #ffffff;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
 
-<!-- SEO TITLE -->
-<title>Tekzzo IT Solutions | Web Development, Software & Mobile App Company</title>
+    /* Modern gradient + glassmorphism header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(10, 25, 47, 0.92);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 7%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
 
-<!-- SEO META TAGS -->
-<meta name="description" content="Tekzzo IT Solutions is a professional IT company providing Web Development, Mobile App Development, Software Solutions and Digital Marketing services.">
+    .header .logo img {
+      height: 48px;
+      transition: 0.2s;
+    }
 
-<meta name="keywords" content="Tekzzo, Tekzzo IT Solutions, Web Development Company, Software Development, Mobile App Development, Digital Marketing, Nashik IT Company">
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      margin: 0;
+    }
 
-<meta name="author" content="Tekzzo IT Solutions">
+    .navbar ul li a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #f0f6ff;
+      transition: 0.2s;
+      letter-spacing: 0.3px;
+    }
 
-<meta name="robots" content="index, follow">
+    .navbar ul li a:hover {
+      color: #3b82f6;
+    }
 
-<link rel="canonical" href="https://tekzzoitsolutions.netlify.app">
+    .fas.fa-bars {
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+      display: none;
+    }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- 
+    /* Hero section - modern tech vibe */
+    .home {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0a192f 0%, #0f2b3d 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
 
-<!-- FAVICON -->
-<link rel="icon" href="./images/image.png">
+    .home-content {
+      z-index: 2;
+      padding: 0 1rem;
+    }
 
-<!-- OPEN GRAPH -->
-<meta property="og:title" content="Tekzzo IT Solutions">
-<meta property="og:description" content="Professional Web Development & Software Company">
-<meta property="og:image" content="./images/image.png">
-<meta property="og:type" content="website">
+    .home-content h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(120deg, #fff, #60a5fa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
 
-<!-- TWITTER -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tekzzo IT Solutions">
-<meta name="twitter:description" content="Web Development, Mobile App Development & Software Company">
+    .home-content h2 {
+      font-size: 2rem;
+      color: #cbd5e6;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
 
-<!-- CSS FILES -->
-<link rel="stylesheet" href="./css/style.css">
+    .home-buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    .btn {
+      padding: 0.8rem 2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      transition: all 0.2s;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    .primary-btn {
+      background: #3b82f6;
+      color: white;
+      box-shadow: 0 10px 20px -5px rgba(59,130,246,0.4);
+    }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    .primary-btn:hover {
+      background: #2563eb;
+      transform: translateY(-3px);
+    }
 
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    .secondary-btn {
+      background: transparent;
+      border: 2px solid #60a5fa;
+      color: white;
+    }
 
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    .secondary-btn:hover {
+      background: rgba(96,165,250,0.1);
+      transform: translateY(-3px);
+    }
 
-<!-- JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    /* wave effect */
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') repeat-x;
+      background-size: cover;
+      opacity: 0.8;
+    }
 
-<script src="./js/main.js"></script>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "Tekzzo IT Solutions",
- "url": "https://tekzzoitsolutions.netlify.app",
- "logo": "https://tekzzoitsolutions.netlify.app/images/image.png",
- "contactPoint": {
-   "@type": "ContactPoint",
-   "telephone": "+91-9699214019",
-   "contactType": "customer service"
- }
-}
-</script>
+    .heading {
+      font-size: 2.8rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 3rem;
+      background: linear-gradient(135deg, #0a192f, #1e3a5f);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* about modern card */
+    .about {
+      padding: 5rem 7%;
+      background: #f9fafc;
+    }
+
+    .about .content {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Service items - refined */
+    .item {
+      background: white;
+      border-radius: 28px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
+      height: 100%;
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 40px -12px rgba(59,130,246,0.2);
+    }
+
+    .icon {
+      font-size: 3rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .feature_box_col_one i { color: #3b82f6; }
+    .feature_box_col_two i { color: #8b5cf6; }
+    .feature_box_col_three i { color: #ec489a; }
+
+    /* counters modern */
+    .counters {
+      background: linear-gradient(120deg, #0f172a, #1e293b);
+      color: white;
+      padding: 4rem 0;
+    }
+
+    .counters .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .counter {
+      font-size: 2.8rem;
+      font-weight: 800;
+    }
+
+    /* communicate banner */
+    .communicate {
+      background: radial-gradient(circle at 10% 30%, #1e3a8a, #0f172a);
+      padding: 4rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .testimonials-carousel .testimonial-item {
+      background: white;
+      border-radius: 30px;
+      padding: 2rem;
+      margin: 1rem;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 5%;
+    }
+
+    .card {
+      background: white;
+      border-radius: 32px;
+      overflow: hidden;
+      width: 260px;
+      transition: 0.2s;
+      box-shadow: 0 12px 24px -10px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .contact {
+      background: #f1f5f9;
+      padding: 4rem 2rem;
+    }
+
+    .contact-form {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 40px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 60px;
+      font-size: 1rem;
+    }
+
+    .contact-form textarea {
+      border-radius: 28px;
+      resize: vertical;
+    }
+
+    .contact-btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-form-btn {
+      flex: 1;
+      padding: 0.9rem;
+      border-radius: 60px;
+      font-weight: bold;
+      border: none;
+      transition: 0.2s;
+    }
+
+    .email-btn {
+      background: #3b82f6;
+      color: white;
+    }
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+    }
+
+    .accordion-container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .accordion {
+      background: white;
+      margin-bottom: 1.2rem;
+      border-radius: 28px;
+      padding: 0.5rem 1.5rem;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+    }
+
+    .accordion-header {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .footer {
+      background: #0b1120;
+      color: #cbd5e1;
+      padding-top: 3rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 999;
+      transition: 0.2s;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 90px;
+      right: 25px;
+      background: #3b82f6;
+      width: 45px;
+      height: 45px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      z-index: 999;
+    }
+
+    @media (max-width: 992px) {
+      .navbar ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        background: #0f172ae6;
+        backdrop-filter: blur(20px);
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 0;
+        transition: 0.3s;
+      }
+      .fas.fa-bars {
+        display: block;
+      }
+      .navbar.active ul {
+        left: 0;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
 <header class="header">
-<a href="#" class="logo"><img src="./images/image.png" alt=""></a>
-
-<div class="fas fa-bars"></div>
-
-<nav class="navbar">
-<ul>
-
-<li><a href="#home">home</a></li>
-<li><a href="#about">about</a></li>
-<li><a href="#service">services</a></li>
-<li><a href="#portfolio">portfolio</a></li>
-<li><a href="#team">team</a></li>
-<li><a href="careers.html">career</a></li>
-<li><a href="#contact">contact</a></li>
-<li><a href="#faq">FAQ</a></li>
-
-</ul>
-</nav>
+  <a href="#" class="logo"><img src="./images/image.png" alt="Tekzzo Logo" style="border-radius: 12px;"></a>
+  <div class="fas fa-bars" id="menu-btn"></div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#service">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="careers.html">Career</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section id="home" class="home">
-
-<div class="home-content">
-
-<h1>Bring your Business Online</h1>
-
-<h2>with Tekzzo It Solutions</h2>
-
-<div class="home-buttons">
-
-<a href="#contact" class="btn primary-btn">Get Started</a>
-
-<a href="#portfolio" class="btn secondary-btn">View Our Work</a>
-
-</div>
-</div>
-
-<div class="wave wave1"></div>
-<div class="wave wave2"></div>
-<div class="wave wave3"></div>
-
+  <div class="home-content">
+    <h1>Launch your Digital Future</h1>
+    <h2>with Tekzzo IT Solutions — Innovation that scales</h2>
+    <div class="home-buttons">
+      <a href="#contact" class="btn primary-btn">Start a Project</a>
+      <a href="#portfolio" class="btn secondary-btn">Explore Work</a>
+    </div>
+  </div>
+  <div class="wave wave1"></div>
 </section>
 
 <section id="about" class="about">
-
-<h1 class="heading">about us</h1>
-
-<div class="row">
-
-<div class="content">
-
-<h3>Engineering digital solutions that move your business forward</h3>
-
-<p>
-Our team delivers scalable APIs, smart software, and reliable technology
-designed to solve real business challenges and drive growth.
-</p>
-
-<a href="#"><button class="btn">Read More</button></a>
-
-</div>
-</div>
+  <h1 class="heading">about us</h1>
+  <div class="row">
+    <div class="content">
+      <h3>Engineering digital solutions that move your business forward</h3>
+      <p style="font-size: 1.1rem; line-height: 1.6;">Tekzzo is a modern IT startup driven by passion for code, design, and user experience. We build scalable web apps, enterprise software, and intelligent mobile solutions. Our agile team transforms complex ideas into high-performance digital assets that drive measurable growth.</p>
+      <a href="#contact"><button class="btn primary-btn" style="margin-top: 1.5rem;">Discover more</button></a>
+    </div>
+  </div>
 </section>
 
-<div class="pt-5 pb-5" style="background-color:#f2f2f2;">
-
-<div class="container">
-
-<div class="row">
-
-<div class="section-head col-sm-12" id="service">
-
-<h1>Our Services</h1>
-
-<p>
-We design, develop, and deliver high-quality digital products and IT services
-that are secure, scalable, and aligned with your business goals.
-</p>
-
-</div>
-
-<div class="col-lg-4 col-sm-6">
-
-<div class="item">
-
-<span class="icon feature_box_col_one"><i class="fa fa-laptop"></i></span>
-
-<h6>Web App Development</h6>
-
-<p>
-Our Custom Web Development Services Include Both Front-End And Back-End Development.
-Whether It Is Enhancing An Existing App Or Architecting An Enterprise App,
-Our Developers Are Up For The Challenge.
-</p>
-
-</div>
-</div>
-
-<div class="col-lg-4 col-sm-6">
-
-<div class="item">
-
-<span class="icon feature_box_col_two"><i class="fa fa-android"></i></span>
-
-<h6>Mobile App Development</h6>
-
-<p>
-We Have Expertise In Creating Multi-Platform Mobile App Solutions For Both Android
-And IOS Devices. Using PhoneGap, Xamarin, And React Native,
-We Offer Custom Mobile App That Runs Smoothly On Multiple Platforms.
-</p>
-
-</div>
-</div>
-
-<div class="col-lg-4 col-sm-6">
-
-<div class="item">
-
-<span class="icon feature_box_col_three"><i class="fa fa-magic"></i></span>
-
-<h6>Digital Marketing</h6>
-
-<p>
-The digital marketing services that we provide have their own set of charms.
-By taking our digital marketing services, our clients will be able
-to increase visibility and engage with their customers at the online platform.
-</p>
-
-</div>
-</div>
-
-</div>
-</div>
-</div>
-
-<!-- BOOTSTRAP JS -->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- REMAINING PART SAME AS YOUR ORIGINAL -->
-
-<section class="counters">
-<div class="container">
-
-<div>
-<i class="far fa-clock fa-4x"></i>
-<div class="counter" data-target="13500">0</div>
-<h3>Working Hours</h3>
-</div>
-
-<div>
-<i class="fas fa-gift fa-4x"></i>
-<div class="counter" data-target="30">0</div>
-<h3>Completed Projects</h3>
-</div>
-
-<div>
-<i class="fas fa-users fa-4x"></i>
-<div class="counter" data-target="50">0</div>
-<h3>Happy Clients</h3>
-</div>
-
-<div>
-<i class="fas fa-award fa-4x"></i>
-<div class="counter" data-target="25">0</div>
-<h3>Awards Received</h3>
-</div>
-
-</div>
-</section>
-
-<div class="pt-5 pb-5">
-    <div class="container">
-      <div class="row">
-        <div class="section-head-1 col-sm-12" style="text-align: center;">
-          <h4 style="margin-top: -5rem;" id="portfolio"><span>Our</span> Projects</h4>
-          
-          <p>The objective of IT Company is to enable a large number of youth to take up <br>industry-relevant skill training that will help them<br> in securing a better livelihood.
-            </p>
-        </div>
-        
-        <div class="col-lg-4 col-sm-6">
-          
-          <div class="item"> <span class="icon feature_box_col_four"><i class="fa fa-database"></i></span>
-            <h6>Project-1</h6>
-            
-            <p>Custom E-commerce Website built using modern technologies., consectetuer adipiscing elit. Aenean commodo ligula eget dolor Aenean massa.<br><br><br></p>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-upload"></i></span>
-            <h6>Project-2</h6>
-            <p>Custom E-commerce Website built using modern technologies., consectetuer adipiscing elit. Aenean commodo ligula eget dolor Aenean massa.<br><br><br></p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_six"><i class="fa fa-camera"></i></span>
-            <h6>Project-3</h6>
-            <p>Custom E-commerce Website built using modern technologies., consectetuer adipiscing elit. Aenean commodo ligula eget dolor Aenean massa.<br><br><br></p>
-          </div>
-        </div>
+<div class="pt-5 pb-5" style="background-color:#f8fafc;">
+  <div class="container">
+    <div class="section-head col-sm-12" id="service">
+      <h1 style="font-size: 2.5rem; font-weight: 800; text-align: center;">Our Services</h1>
+      <p style="text-align: center; margin-bottom: 2rem;">Secure, scalable and future-proof digital products</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="item"><span class="icon feature_box_col_one"><i class="fa fa-laptop-code fa-3x"></i></span><h6>Web App Development</h6><p>High-performance React, Vue & Node.js apps. Enterprise-grade portals, SaaS platforms, and custom CMS.</p></div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="item"><span class="icon feature_box_col_two"><i class="fa fa-mobile-alt fa-3x"></i></span><h6>Mobile App Development</h6><p>Native & cross-platform iOS/Android apps using Flutter, React Native. Smooth UI, offline sync & cloud integration.</p></div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="item"><span class="icon feature_box_col_three"><i class="fa fa-chart-line fa-3x"></i></span><h6>Digital Marketing</h6><p>SEO-first strategy, performance marketing, social media growth, and conversion-focused campaigns.</p></div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Counters -->
+<section class="counters">
+  <div class="container">
+    <div><i class="far fa-clock fa-3x mb-2"></i><div class="counter" data-target="15800">0</div><h3>Working Hours</h3></div>
+    <div><i class="fas fa-gift fa-3x mb-2"></i><div class="counter" data-target="48">0</div><h3>Projects Delivered</h3></div>
+    <div><i class="fas fa-users fa-3x mb-2"></i><div class="counter" data-target="62">0</div><h3>Happy Clients</h3></div>
+    <div><i class="fas fa-award fa-3x mb-2"></i><div class="counter" data-target="12">0</div><h3>Industry Awards</h3></div>
+  </div>
+</section>
+
+<div class="pt-5 pb-5" id="portfolio">
+  <div class="container">
+    <div class="section-head-1 col-sm-12" style="text-align: center;"><h4 style="font-size: 2.2rem; font-weight: 700;"><span>Our</span> Featured Projects</h4><p>Innovative solutions that redefine user experience</p></div>
+    <div class="row mt-5">
+      <div class="col-lg-4 col-sm-6 mb-4"><div class="item"><span class="icon"><i class="fa fa-store fa-3x" style="color:#3b82f6;"></i></span><h6>OmniCommerce Hub</h6><p>Multi-vendor e‑commerce platform with real-time inventory & AI recommendations.</p></div></div>
+      <div class="col-lg-4 col-sm-6 mb-4"><div class="item"><span class="icon"><i class="fa fa-chalkboard-user fa-3x" style="color:#8b5cf6;"></i></span><h6>EduTech LMS</h6><p>Scalable learning management system with live classes, assessments & certificates.</p></div></div>
+      <div class="col-lg-4 col-sm-6 mb-4"><div class="item"><span class="icon"><i class="fa fa-notes-medical fa-3x" style="color:#ec489a;"></i></span><h6>MediHealth App</h6><p>Telemedicine & e‑pharmacy solution with appointment scheduling & e‑prescriptions.</p></div></div>
+    </div>
+  </div>
 </div>
 
 <div class="communicate">
-    <h3>Custom E-commerce Website built using modern technologies. consectetur adipisicing elit.</h3>
-    <p>Custom E-commerce Website built using modern technologies..</p>
-    <a href="#contact"><button class="btn">Contact Now</button></a>
+  <h3>Ready to transform your digital presence?</h3>
+  <p>Let’s build something extraordinary — from concept to launch.</p>
+  <a href="#contact"><button class="btn primary-btn" style="background:#ffffff; color:#0f172a;">Contact Now →</button></a>
 </div>
 
-<div class="testimonials mt-100">
-    <div class="container">
-        <div class="section-header" style="text-align: center;">
-            <h2 style="margin-top: -15rem;">Testimonials</h2>
-            <p style="font-size: 2rem;">
-                See what people have to say about us
-            </p>
-        </div>
-
-        <div class="owl-carousel testimonials-carousel">
-            <div class="testimonial-item row align-items-center">
-                <div class="testimonial-img">
-                    <img src="./images/testimonial-1.jpg" alt="Testimonial image">
-                </div>
-                <div class="testimonial-text">
-                    <h3>Person-1</h3>
-                    <h4>Designation</h4>
-                    <p>
-                        Testimonial
-
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item row align-items-center">
-                <div class="testimonial-img">
-                    <img src="./images/testimonial-2.jpg" alt="Testimonial image">
-                </div>
-                <div class="testimonial-text">
-                    <h3>Person-2</h3>
-                    <h4>Designation</h4>
-                    <p>
-                        Testimonial
-
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item row align-items-center">
-                <div class="testimonial-img">
-                    <img src="./images/testimonial-3.jpg" alt="Testimonial image">
-                </div>
-                <div class="testimonial-text">
-                    <h3>Person-3</h3>
-                    <h4>Designation</h4>
-                    <p>
-                        Testimonial
-
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item row align-items-center">
-                <div class="testimonial-img">
-                    <img src="./images/testimonial-4.jpg" alt="Testimonial image">
-                </div>
-                <div class="testimonial-text">
-                    <h3>Person-4</h3>
-                    <h4>Designation</h4>
-                    <p>
-                        Testimonial
-
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item row align-items-center">
-                <div class="testimonial-img">
-                    <img src="./images/testimonial-5.jpg" alt="Testimonial image">
-                </div>
-                <div class="testimonial-text">
-                    <h3>Person-5</h3>
-                    <h4>Designation</h4>
-                    <p>
-                        Testimonial
-
-                    </p>
-                </div>
-            </div>
-        </div>
+<!-- Testimonials -->
+<div class="testimonials mt-5 mb-5">
+  <div class="container">
+    <div class="section-header" style="text-align: center;"><h2>Client Stories</h2><p>Trusted by startups & enterprises</p></div>
+    <div class="owl-carousel testimonials-carousel owl-theme">
+      <div class="testimonial-item"><div class="testimonial-text"><h3>Riya Sharma</h3><h4>Founder, ZestHealth</h4><p>“Tekzzo delivered a flawless mobile app within timeline. Their modern approach and support exceeded expectations!”</p></div></div>
+      <div class="testimonial-item"><div class="testimonial-text"><h3>Kunal Mehta</h3><h4>CTO, SwiftRetail</h4><p>“The team built a robust inventory system that increased our efficiency by 40%. Highly recommend.”</p></div></div>
+      <div class="testimonial-item"><div class="testimonial-text"><h3>Anjali Patil</h3><h4>Marketing Head</h4><p>“Our web traffic doubled after their SEO & redesign. Creative, responsive and data-driven.”</p></div></div>
     </div>
+  </div>
 </div>
 
-<div class="clients mt-100">
-    <div class="container">
-        <div class="section-header">
-            <h2>Our Clients</h2>
-            <p>
-                We don't just build softwares, we build your business.
-            </p>
-        </div>
-        <div class="owl-carousel clients-carousel">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-        </div>
-    </div>
-</div>
-<a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
-<script src="lib/jquery/jquery-migrate.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/lightbox/js/lightbox.min.js"></script>
-
-<section class="team" style="margin-top: 7rem;">
-  <h1 class="heading" style="margin-top: -1.5rem;" id="team">our team</h1>
-  <p></p>
-  <div class="row">
-      <div class="card">
-          <div class="image">
-              <img src="./images/myimage.jpg" alt="Team member 1">
-          </div>
-          <div class="info">
-              <h3>Nagasen Gawai</h3>
-              <span>founder & ceo</span>
-              <div class="icons">
-                  <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                  <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                  <a href="https://www.instagram.com/tekzzo_it_solutions?utm_source=qr&igsh=MTRnNWsydW1neTdkNQ==" class="fab fa-instagram"></a>
-                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="card">
-          <div class="image">
-              <img src="./images/pexels-vinicius-wiesehofer-1130624.jpg" alt="Team member 1">
-          </div>
-          <div class="info">
-              <h3>Nicole Bell</h3>
-              <span>Mobile Developer</span>
-              <div class="icons">
-                  <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                  <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                  <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="card">
-          <div class="image">
-              <img src="./images/pexels-hussein-altameemi-2776353.jpg" alt="Team member 1">
-          </div>
-          <div class="info">
-              <h3>John Doe</h3>
-              <span>Graphic Designer</span>
-              <div class="icons">
-                  <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                  <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                  <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="card">
-          <div class="image">
-              <img src="./images/pexels-andrea-piacquadio-745136.jpg" alt="Team member 1">
-          </div>
-          <div class="info">
-              <h3>Rose Matthews</h3>
-              <span>Web Designer</span>
-              <div class="icons">
-                  <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                  <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                  <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-              </div>
-          </div>
-      </div>
-  </div>
+<section class="team" id="team">
+  <h1 class="heading" style="width:100%;">Core Team</h1>
+  <div class="card"><div class="image"><img src="./images/myimage.jpg" alt="CEO"></div><div class="info"><h3>Nagasen Gawai</h3><span>Founder & CEO</span><div class="icons"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></div></div>
+  <div class="card"><div class="image"><img src="./images/pexels-vinicius-wiesehofer-1130624.jpg" alt="Mobile Lead"></div><div class="info"><h3>Nicole Bell</h3><span>Mobile Architect</span><div class="icons"><a href="#"><i class="fab fa-linkedin"></i></a></div></div></div>
+  <div class="card"><div class="image"><img src="./images/pexels-hussein-altameemi-2776353.jpg" alt="Designer"></div><div class="info"><h3>John Doe</h3><span>Lead Designer</span><div class="icons"><a href="#"><i class="fab fa-dribbble"></i></a></div></div></div>
+  <div class="card"><div class="image"><img src="./images/pexels-andrea-piacquadio-745136.jpg" alt="Web Expert"></div><div class="info"><h3>Rose Matthews</h3><span>Full-stack Dev</span><div class="icons"><a href="#"><i class="fab fa-github"></i></a></div></div></div>
 </section>
-
-
 
 <section id="contact" class="contact">
-  <h2 class="heading">Get in Touch</h2>
-
-<div class="contact-map">
-
-<iframe 
-src="https://www.google.com/maps?q=Nashik&output=embed"
-width="100%" 
-height="350" 
-style="border:0;" 
-loading="lazy">
-</iframe>
-
-</div>
-
-    <div class="contact-form">
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact">
-
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="phone" placeholder="Phone" required>
-        <textarea name="message" placeholder="Message" required></textarea>
-
-        <div class="contact-btn-group">
-          <button type="submit" class="contact-form-btn email-btn">📧 Send Email</button>
-          <button type="button" id="whatsapp-btn" class="contact-form-btn whatsapp-btn">💬 WhatsApp</button>
-        </div>
-      </form>
-    </div>
+  <h2 class="heading">Let’s connect & innovate</h2>
+  <div class="contact-map" style="margin-bottom: 2rem;"><iframe src="https://www.google.com/maps?q=Nashik&output=embed" width="100%" height="280" style="border-radius: 32px;" loading="lazy"></iframe></div>
+  <div class="contact-form">
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email address" required>
+      <input type="tel" name="phone" placeholder="Phone number" required>
+      <textarea name="message" placeholder="Tell us about your project..." rows="4" required></textarea>
+      <div class="contact-btn-group">
+        <button type="submit" class="contact-form-btn email-btn">📧 Send Message</button>
+        <button type="button" id="whatsapp-btn" class="contact-form-btn whatsapp-btn">💬 Chat on WhatsApp</button>
+      </div>
+    </form>
   </div>
 </section>
 
-
-
-    <section class="faq">
-      <h1 class="heading" style="margin-top: -2rem; color: #00bfff;" id="faq">FAQ</h1>
-      <div class="row">
-          <div class="accordion-container">
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>How much will it cost?</h3>
-                  </div>
-                  <div class="accordion-body">
-                      <p>To get a better idea of the cost of what you want to build, give us a quick phone call. We’ll ask you a few questions about the nature of the site, what sort of interactivity the site will have, your graphic design needs, etc. 
-                          Then we’ll be able to give you a ballpark figure. 
-                          If you’re still interested, we’ll come to your place of business and come up with a firm quote.</p>
-                  </div>
-              </div>
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>How long it takes to design?</h3>
-                  </div>
-                  <div class="accordion-body">
-                      <p>The time limit of any assignment is normally dictated by the client. If you have any time limit in mind we will attempt to assemble it for you. 
-                          The main general delay in the making of a website is waiting for the content of the pages to be sent to us by the client.</p>
-                  </div>
-              </div>
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>How do I associate with IT Company?</h3>
-                  </div>
-                  <div class="accordion-body">
-                      <p>The process begins when you contact us with your requirements. We analyze your requirements and respond to you. 
-                          On the basis of the further discussion, you can choose an engagement model that suits you the best. 
-                          After that, we begin the process of development.</p>
-                  </div>
-              </div>
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>Can you help my current site look more professional?</h3>
-                  </div>
-                  <div class="accordion-body">
-                      <p>Yes. Give us your requirements and we have experienced expertise to help you give a 
-                          new professional look that really wonders!</p>
-                  </div>
-              </div>
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>When do I pay?</h3>
-                  </div>
-                  <div class="accordion-body">
-                      <p>For most projects, equal payments are made at the start, midway, and the end of the project, but we can work with you to set up a schedule that meets your needs. 
-                          We understand that this is a big investment and want to help you budget for the expense in whatever way possible.
-                          We accept checks, PayPal, and all major credit cards.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-    <div class="footer">
-      <div class="footer-top">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-3 col-md-6 footer-links">
-                      <h4>About Us</h4>
-                      <ul>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#">Home</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#about">About us</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#service">Our services</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#">Terms & condition</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#">Privacy policy</a></li>
-                      </ul>
-                  </div>
-
-                  <div class="col-lg-3 col-md-6 footer-links">
-                      <h4>Useful Links</h4>
-                      <ul>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#portfolio">Portfolio</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#team">Team</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="careers.html">Career</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#contact">Contact</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#faq">FAQ</a></li>
-                      </ul>
-                  </div>
-
-                  <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
-                      <h4>Contact Us</h4>
-                      <p>
-                          flat 7 vatslaya appt pagare mala<br>
-                          upnagar,nashik<br>
-                          maharashtra,india 422006 <br>
-                          <strong>Phone:</strong> +919699214019<br>
-                          <strong>Email:</strong> tekzzoitsolutions@gmail.com<br>
-                      </p>
-
-                  <div class="social-links">
-
-<a href="https://www.facebook.com/" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
-
-<a href="https://twitter.com/" target="_blank">
-<i class="fab fa-twitter"></i>
-</a>
-
-<a href="https://www.linkedin.com/" target="_blank">
-<i class="fab fa-linkedin-in"></i>
-</a>
-
-<a href="https://www.instagram.com/tekzzo_it_solutions" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.youtube.com/" target="_blank">
-<i class="fab fa-youtube"></i>
-</a>
-
-</div>
-
-                  </div>
-
-                  <div class="col-lg-3 col-md-6 footer-newsletter">
-                      <h4>Subscription</h4>
-                      <p>With Our Skills Put Together, You Get An Ensemble Capable Of Doing Anything And Everything Your Brand Needs. Subscribe Here To Get Our Latest Updates.</p>
-                      <form action="" method="post">
-                          <input type="email" name="email"><input type="submit"  value="Subscribe">
-                      </form>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-
-      <div class="container">
-          <div class="row align-items-center">
-              <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
-                  Copyright &copy; 2026 Tekzzo It Solutions. All Rights Reserved.
-              </div>
-          </div>
-      </div>
+<section class="faq" id="faq">
+  <h1 class="heading" style="color:#0f2b3d;">Frequently Asked</h1>
+  <div class="accordion-container">
+    <div class="accordion"><div class="accordion-header"><span>+</span><h3>What’s the typical project timeline?</h3></div><div class="accordion-body"><p>It depends on complexity, but a standard website takes 4-6 weeks. Mobile apps 8-12 weeks. We deliver agile milestones.</p></div></div>
+    <div class="accordion"><div class="accordion-header"><span>+</span><h3>Do you provide post-launch support?</h3></div><div class="accordion-body"><p>Absolutely. We offer maintenance packages, security updates, and 24/7 emergency support for all our solutions.</p></div></div>
+    <div class="accordion"><div class="accordion-header"><span>+</span><h3>How do you charge for projects?</h3></div><div class="accordion-body"><p>We work with fixed-cost or time & material based on your needs. Transparent pricing with milestone payments.</p></div></div>
   </div>
+</section>
 
-  <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6"><h4>Tekzzo IT Solutions</h4><p>Modern tech studio building future-ready digital experiences. Based in Nashik, serving globally.</p></div>
+      <div class="col-lg-4 col-md-6"><h4>Quick Links</h4><ul style="list-style:none;"><li><a href="#home" style="color:#cbd5e1;">Home</a></li><li><a href="#about" style="color:#cbd5e1;">About</a></li><li><a href="#service" style="color:#cbd5e1;">Services</a></li></ul></div>
+      <div class="col-lg-4 col-md-6"><h4>Connect</h4><p><i class="fas fa-phone-alt"></i> +91-9699214019</p><p><i class="fas fa-envelope"></i> tekzzoitsolutions@gmail.com</p><div class="social-links"><a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-linkedin"></i></a></div></div>
+    </div>
+    <div class="row mt-4"><div class="col text-center copyright">© 2026 Tekzzo IT Solutions — Innovation-driven IT startup. All rights reserved.</div></div>
+  </div>
+</footer>
+<a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+<a href="https://wa.me/919699214019" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  // mobile menu
+  $('#menu-btn').click(function(){ $('.navbar').toggleClass('active'); });
+  // accordion
+  $('.accordion-header').click(function(){ $(this).parent().find('.accordion-body').slideToggle(); $(this).find('span').text($(this).find('span').text() === '+' ? '−' : '+'); });
+  // counter
+  const counters = document.querySelectorAll('.counter');
+  const speed = 200;
+  const startCounters = () => {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = target / speed;
+        if(count < target) { counter.innerText = Math.ceil(count + inc); setTimeout(updateCount, 20); }
+        else counter.innerText = target;
+      };
+      updateCount();
+    });
+  };
+  window.addEventListener('scroll', function() { if(window.scrollY > 300) startCounters(); });
+  startCounters();
 
-
-
-  <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919699214019" class="whatsapp-float" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
+  // testimonials carousel
+  $('.testimonials-carousel').owlCarousel({ loop:true, margin:20, nav:false, dots:true, responsive:{0:{items:1},768:{items:2},1000:{items:2}} });
+  
+  // whatsapp prefill
+  $('#whatsapp-btn').click(function() {
+    let name = $('input[name="name"]').val();
+    let msg = $('textarea[name="message"]').val();
+    let phone = $('input[name="phone"]').val();
+    let text = `Hello Tekzzo! I'm ${name || 'a visitor'}. ${msg ? 'Message: '+msg : 'Interested in your services.'} Contact me at ${phone || ''}`;
+    window.open(`https://wa.me/919699214019?text=${encodeURIComponent(text)}`, '_blank');
+  });
+</script>
 </body>
 </html>
