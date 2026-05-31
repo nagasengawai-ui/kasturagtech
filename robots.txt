@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tekzzoitsolutions.netlify.app/sitemap.xml
+Sitemap: https://kasturagtech.netlify.app/sitemap.xml
