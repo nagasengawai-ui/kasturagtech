@@ -1,172 +1,362 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Company Website</title>
-    <link rel="stylesheet" href="./css/careers.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="icon" href="./images/image.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <script src="./js/main.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers | Kasturag Tech</title>
+
+<link rel="icon" type="image/png" href="./images/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#f8fafc;
+overflow-x:hidden;
+}
+
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:15px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(10,20,35,.95);
+backdrop-filter:blur(15px);
+z-index:1000;
+}
+
+.logo img{
+height:55px;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.navbar ul li a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+.navbar ul li a:hover{
+color:#60a5fa;
+}
+
+.hero{
+height:60vh;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+font-weight:800;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-top:15px;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+font-weight:800;
+color:#0f172a;
+margin-bottom:50px;
+}
+
+.jobs{
+padding:100px 8%;
+background:white;
+}
+
+.job-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.job-card{
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.job-card:hover{
+transform:translateY(-10px);
+}
+
+.job-card i{
+font-size:45px;
+color:#2563eb;
+margin-bottom:15px;
+}
+
+.job-card h3{
+margin-bottom:10px;
+}
+
+.benefits{
+padding:100px 8%;
+background:#f1f5f9;
+}
+
+.benefit-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.benefit{
+background:white;
+padding:25px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.benefit i{
+font-size:40px;
+color:#2563eb;
+margin-bottom:15px;
+}
+
+.apply{
+padding:100px 8%;
+background:white;
+}
+
+.form-box{
+max-width:850px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:30px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:1px solid #dbeafe;
+border-radius:12px;
+font-size:16px;
+}
+
+.form-box textarea{
+height:140px;
+resize:none;
+}
+
+.btn{
+background:#2563eb;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+font-weight:700;
+}
+
+.btn:hover{
+background:#1d4ed8;
+}
+
+.footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.navbar{
+display:none;
+}
+
+}
+</style>
+
 </head>
+
 <body>
-    <header class="header">
-        <a href="#" class="logo"><img src="./images/image.png" alt=""></a>
-        <div class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html#home">home</a></li>
-                <li><a href="index.html#about">about</a></li>
-                <li><a href="index.html#service">services</a></li>
-                <li><a href="index.html#portfolio">portfolio</a></li>
-                <li><a href="index.html#team">team</a></li>
-                <li><a href="careers.html">career</a></li>
-                <li><a href="index.html#contact">contact</a></li>
-                <li><a href="index.html#faq">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home" class="home">
-        <h2>Home / Careers</h2>
-    </section>
+<header class="header">
+<a href="index.html" class="logo">
+<img src="./images/logo.png" alt="Kasturag Tech">
+</a>
 
-    <section id="career-heading" class="career-heading">
-        <h1 class="heading">Career</h1>
-        <p>Job Opening in IT Company. Apply Now!</p>
-    </section>
-    <div class="career">
-        <div class="career-form">
-            <form action="./careers.php" method="POST" enctype="multipart/form-data">
-                <input type="text" name="name" placeholder="Name" class="career-form-txt" required>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Contact number" maxlength="10" class="career-form-phone">
-                <input type="email" name="email" placeholder="Email" class="career-form-email" required>
-                <div class="radio-class">
-                    <h2 class="name">Apply For Which Post?</h2>
-                <label class="radio">
-                  <input class="radio-one" type="radio" checked="checked" name="status" value="Web Designer">
-                  <span class="checkmark"></span>
-                  Web Designer
-                </label>
-                <label class="radio">
-                  <input class="radio-two" type="radio" name="status" value="Web Developer">
-                  <span class="checkmark"></span>
-                  Web Developer
-                </label>
-                <label class="radio">
-                  <input class="radio-three" type="radio" name="status" value="Mobile App Designer">
-                  <span class="checkmark"></span>
-                  Mobile App Designer
-                </label>
-                <label class="radio">
-                    <input class="radio-four" type="radio" name="status" value="Mobile App Developer">
-                    <span class="checkmark"></span>
-                    Mobile App Developer
-                  </label>
-                <label class="radio">
-                  <input class="radio-five" type="radio"  name="status" value="Digital Marketer">
-                  <span class="checkmark"></span>
-                  Digital Marketer
-                </label>
-                </div>
-                <input type="number" id="experience" name="experience" required placeholder="Years of Experience" class="career-form-experience">
-                <textarea placeholder="Other Details" name="details" class="career-form-txtarea" required></textarea>
-                <div class="file">
-                    <h2 class="name">Upload Your Resume</h2>
-                    <input class="upload" type="file" name="fileToUpload" accept=".doc,.docx,.pdf"><br><br><br>
-                </div>
-                <input type="submit" value="Submit" name="submit" class="career-form-btn">
-            </form>
-        </div>
-    </div>
+<nav class="navbar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#about">About</a></li>
+<li><a href="index.html#service">Services</a></li>
+<li><a href="index.html#portfolio">Portfolio</a></li>
+<li><a href="careers.html">Careers</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
 
-      <div class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>About Us</h4>
-                        <ul>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Home</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#about">About us</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#service">Our services</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Terms & condition</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Privacy policy</a></li>
-                        </ul>
-                    </div>
-  
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#portfolio">Portfolio</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#team">Team</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="careers.html">Career</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#contact">Contact</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#faq">FAQ</a></li>
-                        </ul>
-                    </div>
-  
-                    <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
-                        <h4>Contact Us</h4>
-                        <p>
-                            1300  Center Avenue<br>
-                            Fresno, California<br>
-                            United States <br>
-                            <strong>Phone:</strong> +123-456-7890<br>
-                            <strong>Email:</strong> info@example.com<br>
-                        </p>
-  
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/"><i class="ion-logo-facebook"></i></a>
-                            <a href="https://twitter.com/login?lang=en"><i class="ion-logo-twitter"></i></a>
-                            <a href="https://www.linkedin.com/"><i class="ion-logo-linkedin"></i></a>
-                            <a href="https://www.instagram.com/"><i class="ion-logo-instagram"></i></a>
-                            <a href="https://accounts.google.com/servicelogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="ion-logo-googleplus"></i></a>
-                        </div>
-  
-                    </div>
-  
-                    <div class="col-lg-3 col-md-6 footer-newsletter">
-                        <h4>Subscription</h4>
-                        <p>With Our Skills Put Together, You Get An Ensemble Capable Of Doing Anything And Everything Your Brand Needs. Subscribe Here To Get Our Latest Updates.</p>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit"  value="Subscribe">
-                        </form>
-                    </div>
-  
-                </div>
-            </div>
-        </div>
-  
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
-                    Copyright &copy; 2021 IT Company Website. All Rights Reserved.
-                </div>
-            </div>
-        </div>
-    </div>
+<section class="hero">
+<div>
+<h1>Join Kasturag Tech</h1>
+<p>Build the future with Cloud, DevOps, Web & Mobile Technologies.</p>
+</div>
+</section>
 
-    <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+<section class="jobs">
+<h2 class="section-title">Open Positions</h2>
 
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+<div class="job-grid">
+
+<div class="job-card">
+<i class="fas fa-code"></i>
+<h3>Frontend Developer</h3>
+<p>React, Next.js, JavaScript, Tailwind CSS</p>
+</div>
+
+<div class="job-card">
+<i class="fas fa-server"></i>
+<h3>Backend Developer</h3>
+<p>Java Spring Boot, Node.js, APIs, Databases</p>
+</div>
+
+<div class="job-card">
+<i class="fas fa-cloud"></i>
+<h3>DevOps Engineer</h3>
+<p>AWS, Docker, Kubernetes, CI/CD</p>
+</div>
+
+<div class="job-card">
+<i class="fas fa-mobile-alt"></i>
+<h3>Mobile App Developer</h3>
+<p>Flutter, Android, iOS Development</p>
+</div>
+
+<div class="job-card">
+<i class="fas fa-bullhorn"></i>
+<h3>Digital Marketing Executive</h3>
+<p>SEO, Ads, Social Media Marketing</p>
+</div>
+
+<div class="job-card">
+<i class="fas fa-palette"></i>
+<h3>UI/UX Designer</h3>
+<p>Figma, Adobe XD, Modern Design Systems</p>
+</div>
+
+</div>
+</section>
+
+<section class="benefits">
+
+<h2 class="section-title">Why Join Us?</h2>
+
+<div class="benefit-grid">
+
+<div class="benefit">
+<i class="fas fa-laptop-house"></i>
+<h3>Remote Friendly</h3>
+<p>Work from anywhere.</p>
+</div>
+
+<div class="benefit">
+<i class="fas fa-rocket"></i>
+<h3>Fast Growth</h3>
+<p>Learn modern technologies.</p>
+</div>
+
+<div class="benefit">
+<i class="fas fa-users"></i>
+<h3>Great Team</h3>
+<p>Collaborative environment.</p>
+</div>
+
+<div class="benefit">
+<i class="fas fa-award"></i>
+<h3>Career Development</h3>
+<p>Continuous learning & mentorship.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="apply">
+
+<h2 class="section-title">Apply Now</h2>
+
+<div class="form-box">
+
+<form action="#" method="POST" enctype="multipart/form-data">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<select name="position" required>
+<option value="">Select Position</option>
+<option>Frontend Developer</option>
+<option>Backend Developer</option>
+<option>DevOps Engineer</option>
+<option>Mobile App Developer</option>
+<option>Digital Marketing Executive</option>
+<option>UI/UX Designer</option>
+</select>
+
+<input type="number" name="experience" placeholder="Years of Experience">
+
+<textarea name="message" placeholder="Tell us about yourself"></textarea>
+
+<label><strong>Upload Resume</strong></label> <input type="file" name="resume" accept=".pdf,.doc,.docx">
+
+<button type="submit" class="btn">
+Apply Now
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer class="footer">
+<p>© 2026 Kasturag Tech. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
