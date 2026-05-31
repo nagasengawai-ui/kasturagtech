@@ -1,5 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
 
+/* HEADER FIX */
+.header{
+    background:#002e5f;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+
+.header .logo img{
+    width:180px;
+    height:auto;
+}
+
+/* LOGO CLICK */
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+/* HOME BANNER FIX */
+.home{
+    margin-top:70px;
+    min-height:40vh;
+    background:
+    linear-gradient(rgba(0,46,95,.7),rgba(0,46,95,.7)),
+    url('../images/img3.jpg');
+    background-size:cover;
+    background-position:center;
+}
+
+.home h2{
+    font-size:4rem;
+    color:#fff;
+}
+
+/* CAREER FORM */
+.career{
+    max-width:900px;
+    width:95%;
+    margin:50px auto;
+    padding:30px;
+}
+
+.career-form-txt,
+.career-form-phone,
+.career-form-email,
+.career-form-experience,
+.career-form-txtarea{
+    width:100%;
+    margin-left:0;
+}
+
+/* FILE INPUT */
+.file{
+    margin-left:0;
+    height:auto;
+    margin-bottom:30px;
+}
+
+/* BUTTON */
+.career-form-btn{
+    background:#002e5f;
+    color:white;
+    border:none;
+}
+
+.career-form-btn:hover{
+    background:#00bfff;
+    color:#fff;
+}
+
+/* RADIO SECTION */
+.radio-class{
+    width:100%;
+    height:auto;
+    margin:10px 0 20px 0;
+}
+
+.radio{
+    display:inline-block;
+    margin:10px 20px 10px 0;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .header{
+        padding:15px;
+    }
+
+    .header .logo img{
+        width:140px;
+    }
+
+    .header .navbar{
+        background:#002e5f;
+    }
+
+    .header .navbar ul li a{
+        color:#fff;
+    }
+
+    .career{
+        width:95%;
+        padding:20px;
+    }
+
+    .home h2{
+        font-size:3rem;
+    }
+
+    .radio{
+        display:block;
+        margin:10px 0;
+    }
+}
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0;
