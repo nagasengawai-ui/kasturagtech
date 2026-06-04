@@ -57,9 +57,10 @@ font-weight:600;
 color:#60a5fa;
 }
 
+
 .hero{
-height:60vh;
-background:linear-gradient(135deg,#0f172a,#1e3a8a);
+height:70vh;
+background:radial-gradient(circle at top,#1e3a8a,#0f172a);
 display:flex;
 align-items:center;
 justify-content:center;
@@ -71,13 +72,16 @@ padding:20px;
 .hero h1{
 font-size:4rem;
 font-weight:800;
+background:linear-gradient(90deg,#fff,#60a5fa);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero p{
-font-size:1.2rem;
+font-size:1.3rem;
+color:#cbd5e1;
 margin-top:15px;
 }
-
 .section-title{
 text-align:center;
 font-size:2.5rem;
@@ -98,11 +102,17 @@ gap:25px;
 }
 
 .job-card{
-background:#fff;
+background:white;
 padding:30px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
+border-radius:30px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+transition:.4s;
+border:1px solid rgba(37,99,235,.08);
+}
+
+.job-card:hover{
+transform:translateY(-12px);
+box-shadow:0 25px 50px rgba(37,99,235,.18);
 }
 
 .job-card:hover{
@@ -128,6 +138,43 @@ background:#f1f5f9;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
+}
+
+  #menu-btn{
+display:none;
+color:white;
+font-size:1.8rem;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+#menu-btn{
+display:block;
+}
+
+.navbar{
+position:absolute;
+top:80px;
+left:-100%;
+width:100%;
+background:#0f172a;
+transition:.3s;
+}
+
+.navbar.active{
+left:0;
+}
+
+.navbar ul{
+flex-direction:column;
+padding:20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:2.5rem;
+}
 }
 
 .benefit{
@@ -213,22 +260,22 @@ display:none;
 <body>
 
 <header class="header">
-<a href="index.html" class="logo">
-<img src="./images/logo.png" alt="Kasturag Tech">
-</a>
+  <a href="index.html" class="logo">
+    <img src="./images/logo.png" alt="Kasturag Tech">
+  </a>
+
+  <div class="fas fa-bars" id="menu-btn"></div>
 
 <nav class="navbar">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="index.html#about">About</a></li>
-<li><a href="index.html#service">Services</a></li>
-<li><a href="index.html#portfolio">Portfolio</a></li>
-<li><a href="careers.html">Careers</a></li>
-<li><a href="index.html#contact">Contact</a></li>
-</ul>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#service">Services</a></li>
+    <li><a href="/#portfolio">Portfolio</a></li>
+    <li><a href="/careers.html">Careers</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
 </nav>
-</header>
-
 <section class="hero">
 <div>
 <h1>Join Kasturag Tech</h1>
@@ -320,8 +367,14 @@ display:none;
 
 <div class="form-box">
 
-<form action="#" method="POST" enctype="multipart/form-data">
+<form name="career"
+      method="POST"
+      data-netlify="true"
+      enctype="multipart/form-data">
 
+<input type="hidden"
+       name="form-name"
+       value="career">
 <input type="text" name="name" placeholder="Full Name" required>
 
 <input type="email" name="email" placeholder="Email Address" required>
@@ -354,9 +407,42 @@ Apply Now
 
 </section>
 
-<footer class="footer">
-<p>© 2026 Kasturag Tech. All Rights Reserved.</p>
+<footer class="footer" style="background:#0a0f1c;padding:50px 0;">
+<div class="container">
+
+<h3>Kasturag Tech</h3>
+
+<p>
+Building scalable Web, Cloud &
+DevOps solutions.
+</p>
+
+<p>
+📧 kasturagtech@gmail.com
+</p>
+
+<p>
+📞 +91 9699214019
+</p>
+
+<p>
+© 2026 Kasturag Tech.
+All Rights Reserved.
+</p>
+
+</div>
 </footer>
 
+  <script>
+const menuBtn =
+document.getElementById('menu-btn');
+
+const navbar =
+document.querySelector('.navbar');
+
+menuBtn.addEventListener('click',()=>{
+ navbar.classList.toggle('active');
+});
+</script>
 </body>
 </html>
