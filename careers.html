@@ -1,445 +1,611 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Careers | Kasturag Tech</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Careers | Kasturag Tech - Join Our Team</title>
 
+<!-- Favicon & Assets -->
 <link rel="icon" type="image/png" href="./images/logo.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-body{
-background:#f8fafc;
-overflow-x:hidden;
+body {
+  background: #f8fafc;
+  overflow-x: hidden;
 }
 
-.header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:15px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(10,20,35,.95);
-backdrop-filter:blur(15px);
-z-index:1000;
+/* Header / Navigation */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 20, 35, 0.95);
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-.logo img{
-height:55px;
+.logo img {
+  height: 55px;
+  object-fit: contain;
 }
 
-.navbar ul{
-display:flex;
-list-style:none;
-gap:25px;
+.navbar {
+  transition: 0.3s ease;
 }
 
-.navbar ul li a{
-color:white;
-text-decoration:none;
-font-weight:600;
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
 }
 
-.navbar ul li a:hover{
-color:#60a5fa;
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
 }
 
-
-.hero{
-height:70vh;
-background:radial-gradient(circle at top,#1e3a8a,#0f172a);
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-padding:20px;
+.navbar ul li a:hover {
+  color: #60a5fa;
 }
 
-.hero h1{
-font-size:4rem;
-font-weight:800;
-background:linear-gradient(90deg,#fff,#60a5fa);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+#menu-btn {
+  display: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.hero p{
-font-size:1.3rem;
-color:#cbd5e1;
-margin-top:15px;
-}
-.section-title{
-text-align:center;
-font-size:2.5rem;
-font-weight:800;
-color:#0f172a;
-margin-bottom:50px;
-}
-
-.jobs{
-padding:100px 8%;
-background:white;
+/* Hero Section */
+.hero {
+  min-height: 70vh;
+  background: radial-gradient(circle at top, #1e3a8a, #0f172a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 120px 20px 80px;
+  margin-top: 0;
 }
 
-.job-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff, #60a5fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
 }
 
-.job-card{
-background:white;
-padding:30px;
-border-radius:30px;
-box-shadow:0 15px 30px rgba(0,0,0,.08);
-transition:.4s;
-border:1px solid rgba(37,99,235,.08);
+.hero p {
+  font-size: 1.3rem;
+  color: #cbd5e1;
+  margin-top: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.job-card:hover{
-transform:translateY(-12px);
-box-shadow:0 25px 50px rgba(37,99,235,.18);
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 50px;
+  position: relative;
+}
+.section-title:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #2563eb;
+  margin: 15px auto 0;
+  border-radius: 4px;
 }
 
-.job-card:hover{
-transform:translateY(-10px);
+/* Jobs Section */
+.jobs {
+  padding: 100px 8%;
+  background: white;
 }
 
-.job-card i{
-font-size:45px;
-color:#2563eb;
-margin-bottom:15px;
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-.job-card h3{
-margin-bottom:10px;
+.job-card {
+  background: white;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  text-align: center;
 }
 
-.benefits{
-padding:100px 8%;
-background:#f1f5f9;
+.job-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(37, 99, 235, 0.2);
+  border-color: #2563eb20;
 }
 
-.benefit-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.job-card i {
+  font-size: 48px;
+  color: #2563eb;
+  margin-bottom: 20px;
 }
 
-  #menu-btn{
-display:none;
-color:white;
-font-size:1.8rem;
-cursor:pointer;
+.job-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #0f172a;
 }
 
-@media(max-width:768px){
-
-#menu-btn{
-display:block;
+.job-card p {
+  color: #334155;
+  line-height: 1.5;
 }
 
-.navbar{
-position:absolute;
-top:85px;
-left:-100%;
-width:100%;
-background:#0f172a;
-transition:0.3s ease;
-padding:20px 0;
+/* Benefits Section */
+.benefits {
+  padding: 100px 8%;
+  background: #f1f5f9;
 }
 
-.navbar.active{
-left:0;
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
 }
 
-.navbar ul{
-flex-direction:column;
-align-items:center;
-gap:20px;
+.benefit {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s;
 }
 
-.hero h1{
-font-size:2.5rem;
+.benefit:hover {
+  transform: scale(1.02);
 }
 
-}
-.benefit{
-background:white;
-padding:25px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+.benefit i {
+  font-size: 44px;
+  color: #2563eb;
+  margin-bottom: 18px;
 }
 
-.benefit i{
-font-size:40px;
-color:#2563eb;
-margin-bottom:15px;
+.benefit h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
-.apply{
-padding:100px 8%;
-background:white;
+.benefit p {
+  color: #475569;
 }
 
-.form-box{
-max-width:850px;
-margin:auto;
-background:white;
-padding:40px;
-border-radius:30px;
-box-shadow:0 15px 40px rgba(0,0,0,.08);
+/* Apply Form Section */
+.apply {
+  padding: 100px 8%;
+  background: white;
+}
+
+.form-box {
+  max-width: 850px;
+  margin: auto;
+  background: white;
+  padding: 45px 40px;
+  border-radius: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
 }
 
 .form-box input,
 .form-box textarea,
-.form-box select{
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:1px solid #dbeafe;
-border-radius:12px;
-font-size:16px;
+.form-box select {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  font-size: 1rem;
+  transition: 0.2s;
+  background: #fff;
 }
 
-.form-box textarea{
-height:140px;
-resize:none;
+.form-box input:focus,
+.form-box textarea:focus,
+.form-box select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
-.btn{
-background:#2563eb;
-color:white;
-padding:15px 30px;
-border:none;
-border-radius:50px;
-cursor:pointer;
-font-weight:700;
+.form-box textarea {
+  height: 130px;
+  resize: vertical;
 }
 
-.btn:hover{
-background:#1d4ed8;
+.form-box label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #0f172a;
 }
 
-.footer{
-background:#0f172a;
-color:white;
-text-align:center;
-padding:30px;
+.file-label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  display: block;
 }
 
+.btn {
+  background: #2563eb;
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.2s;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
 
+.btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
 
+/* Footer */
+.footer {
+  background: #0a0f1c;
+  color: #e2e8f0;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.footer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 5%;
+  }
+  
+  #menu-btn {
+    display: block;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 85px;
+    left: -100%;
+    width: 100%;
+    background: #0f172a;
+    backdrop-filter: blur(12px);
+    padding: 25px 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  }
+  
+  .navbar.active {
+    left: 0;
+  }
+  
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+  
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .jobs, .benefits, .apply {
+    padding: 70px 5%;
+  }
+  
+  .form-box {
+    padding: 30px 20px;
+  }
+  
+  .job-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+  .btn {
+    padding: 12px 20px;
+  }
 }
 </style>
-
 </head>
-
 <body>
 
 <header class="header">
   <a href="index.html" class="logo">
-    <img src="./images/logo.png" alt="Kasturag Tech">
+    <img src="./images/logo.png" alt="Kasturag Tech" onerror="this.onerror=null; this.src='https://placehold.co/200x60?text=Kasturag+Tech'">
   </a>
-
   <div class="fas fa-bars" id="menu-btn"></div>
-</header>
-<nav class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#service">Services</a></li>
-    <li><a href="index.html#portfolio">Portfolio</a></li>
-    <li><a href="careers.html">Careers</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
-</nav>
-
+  <nav class="navbar" id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#service">Services</a></li>
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+      <li><a href="careers.html" class="active-nav">Careers</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<section class="hero">
-<section class="hero">
-<div>
-<h1>Join Kasturag Tech</h1>
-<p>Build the future with Cloud, DevOps, Web & Mobile Technologies.</p>
-</div>
-</section>
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Join Kasturag Tech</h1>
+      <p>Build the future with Cloud, DevOps, Web & Mobile Technologies. Shape innovation with us.</p>
+    </div>
+  </section>
 
-<section class="jobs">
-<h2 class="section-title">Open Positions</h2>
+  <!-- Open Positions -->
+  <section class="jobs">
+    <h2 class="section-title">Open Positions</h2>
+    <div class="job-grid">
+      <div class="job-card">
+        <i class="fas fa-code"></i>
+        <h3>Frontend Developer</h3>
+        <p>React, Next.js, JavaScript, Tailwind CSS</p>
+      </div>
+      <div class="job-card">
+        <i class="fas fa-server"></i>
+        <h3>Backend Developer</h3>
+        <p>Java Spring Boot, Node.js, APIs, Databases</p>
+      </div>
+      <div class="job-card">
+        <i class="fas fa-cloud"></i>
+        <h3>DevOps Engineer</h3>
+        <p>AWS, Docker, Kubernetes, CI/CD Pipelines</p>
+      </div>
+      <div class="job-card">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile App Developer</h3>
+        <p>Flutter, Android, iOS Development</p>
+      </div>
+      <div class="job-card">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Digital Marketing Executive</h3>
+        <p>SEO, Ads, Social Media Marketing, Analytics</p>
+      </div>
+      <div class="job-card">
+        <i class="fas fa-palette"></i>
+        <h3>UI/UX Designer</h3>
+        <p>Figma, Adobe XD, Modern Design Systems</p>
+      </div>
+    </div>
+  </section>
 
-<div class="job-grid">
+  <!-- Benefits -->
+  <section class="benefits">
+    <h2 class="section-title">Why Join Us?</h2>
+    <div class="benefit-grid">
+      <div class="benefit">
+        <i class="fas fa-laptop-house"></i>
+        <h3>Remote Friendly</h3>
+        <p>Work from anywhere with flexible hours.</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-rocket"></i>
+        <h3>Fast Growth</h3>
+        <p>Learn modern technologies & scale quickly.</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-users"></i>
+        <h3>Great Team</h3>
+        <p>Collaborative & inclusive environment.</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-award"></i>
+        <h3>Career Development</h3>
+        <p>Mentorship, courses & certifications.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="job-card">
-<i class="fas fa-code"></i>
-<h3>Frontend Developer</h3>
-<p>React, Next.js, JavaScript, Tailwind CSS</p>
-</div>
+  <!-- Application Form (Netlify ready) -->
+  <section class="apply">
+    <h2 class="section-title">Apply Now</h2>
+    <div class="form-box">
+      <form name="career" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+        <!-- hidden fields -->
+        <input type="hidden" name="form-name" value="career">
+        <input type="hidden" name="bot-field" />
+        
+        <input type="text" name="name" placeholder="Full Name" required>
+        
+        <input type="email" name="email" placeholder="Email Address" required>
+        
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        
+        <select name="position" required>
+          <option value="">Select Position</option>
+          <option>Frontend Developer</option>
+          <option>Backend Developer</option>
+          <option>DevOps Engineer</option>
+          <option>Mobile App Developer</option>
+          <option>Digital Marketing Executive</option>
+          <option>UI/UX Designer</option>
+        </select>
+        
+        <input type="number" name="experience" placeholder="Years of Experience">
+        
+        <textarea name="message" placeholder="Tell us about yourself, your skills, and why you'd like to join Kasturag Tech"></textarea>
+        
+        <label class="file-label"><strong>Upload Resume (PDF/DOC/DOCX)</strong></label>
+        <input type="file" name="resume" accept=".pdf,.doc,.docx">
+        
+        <button type="submit" class="btn">Submit Application <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+      </form>
+      <p style="font-size: 0.8rem; margin-top: 20px; text-align: center; color: #475569;">We respect your privacy. Your information stays confidential.</p>
+    </div>
+  </section>
+</main>
 
-<div class="job-card">
-<i class="fas fa-server"></i>
-<h3>Backend Developer</h3>
-<p>Java Spring Boot, Node.js, APIs, Databases</p>
-</div>
-
-<div class="job-card">
-<i class="fas fa-cloud"></i>
-<h3>DevOps Engineer</h3>
-<p>AWS, Docker, Kubernetes, CI/CD</p>
-</div>
-
-<div class="job-card">
-<i class="fas fa-mobile-alt"></i>
-<h3>Mobile App Developer</h3>
-<p>Flutter, Android, iOS Development</p>
-</div>
-
-<div class="job-card">
-<i class="fas fa-bullhorn"></i>
-<h3>Digital Marketing Executive</h3>
-<p>SEO, Ads, Social Media Marketing</p>
-</div>
-
-<div class="job-card">
-<i class="fas fa-palette"></i>
-<h3>UI/UX Designer</h3>
-<p>Figma, Adobe XD, Modern Design Systems</p>
-</div>
-
-</div>
-</section>
-
-<section class="benefits">
-
-<h2 class="section-title">Why Join Us?</h2>
-
-<div class="benefit-grid">
-
-<div class="benefit">
-<i class="fas fa-laptop-house"></i>
-<h3>Remote Friendly</h3>
-<p>Work from anywhere.</p>
-</div>
-
-<div class="benefit">
-<i class="fas fa-rocket"></i>
-<h3>Fast Growth</h3>
-<p>Learn modern technologies.</p>
-</div>
-
-<div class="benefit">
-<i class="fas fa-users"></i>
-<h3>Great Team</h3>
-<p>Collaborative environment.</p>
-</div>
-
-<div class="benefit">
-<i class="fas fa-award"></i>
-<h3>Career Development</h3>
-<p>Continuous learning & mentorship.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="apply">
-
-<h2 class="section-title">Apply Now</h2>
-
-<div class="form-box">
-
-<form name="career"
-      method="POST"
-      data-netlify="true"
-      enctype="multipart/form-data">
-
-<input type="hidden"
-       name="form-name"
-       value="career">
-<input type="text" name="name" placeholder="Full Name" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<input type="tel" name="phone" placeholder="Phone Number" required>
-
-<select name="position" required>
-<option value="">Select Position</option>
-<option>Frontend Developer</option>
-<option>Backend Developer</option>
-<option>DevOps Engineer</option>
-<option>Mobile App Developer</option>
-<option>Digital Marketing Executive</option>
-<option>UI/UX Designer</option>
-</select>
-
-<input type="number" name="experience" placeholder="Years of Experience">
-
-<textarea name="message" placeholder="Tell us about yourself"></textarea>
-
-<label><strong>Upload Resume</strong></label> <input type="file" name="resume" accept=".pdf,.doc,.docx">
-
-<button type="submit" class="btn">
-Apply Now
-</button>
-
-</form>
-
-</div>
-
-</section>
-
-<footer class="footer" style="background:#0a0f1c;padding:50px 0;">
-<div class="container">
-
-<h3>Kasturag Tech</h3>
-
-<p>
-Building scalable Web, Cloud &
-DevOps solutions.
-</p>
-
-<p>
-📧 kasturagtech@gmail.com
-</p>
-
-<p>
-📞 +91 9699214019
-</p>
-
-<p>
-© 2026 Kasturag Tech.
-All Rights Reserved.
-</p>
-
-</div>
+<footer class="footer">
+  <div>
+    <h3>Kasturag Tech</h3>
+    <p>Building scalable Web, Cloud & DevOps solutions.</p>
+    <p><i class="fas fa-envelope"></i> 📧 kasturagtech@gmail.com</p>
+    <p><i class="fas fa-phone-alt"></i> 📞 +91 9699214019</p>
+    <p style="margin-top: 20px;">© 2026 Kasturag Tech. All Rights Reserved.</p>
+  </div>
 </footer>
 
-  <script>
-const menuBtn =
-document.getElementById('menu-btn');
-
-const navbar =
-document.querySelector('.navbar');
-
-menuBtn.addEventListener('click',()=>{
- navbar.classList.toggle('active');
-});
+<script>
+  // Mobile menu toggle + fix any double hero / header issues
+  (function() {
+    const menuBtn = document.getElementById('menu-btn');
+    const navbar = document.getElementById('navbar');
+    
+    if (menuBtn && navbar) {
+      menuBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navbar.classList.toggle('active');
+        // Optional: change icon style
+        const icon = menuBtn.classList;
+        if (navbar.classList.contains('active')) {
+          menuBtn.classList.remove('fa-bars');
+          menuBtn.classList.add('fa-times');
+        } else {
+          menuBtn.classList.remove('fa-times');
+          menuBtn.classList.add('fa-bars');
+        }
+      });
+      
+      // Close navbar when a link is clicked (mobile ux)
+      const navLinks = navbar.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            navbar.classList.remove('active');
+            menuBtn.classList.remove('fa-times');
+            menuBtn.classList.add('fa-bars');
+          }
+        });
+      });
+    }
+    
+    // Fix any duplicate hero sections if present (clean DOM)
+    // Ensure only one hero exists (safety)
+    const heroes = document.querySelectorAll('.hero');
+    if (heroes.length > 1) {
+      // Remove the duplicate hero (first child of body after header)
+      for(let i = 1; i < heroes.length; i++) {
+        if(heroes[i] && heroes[i].parentNode) heroes[i].remove();
+      }
+    }
+    
+    // Ensure header + navbar structure is correct:
+    // The original code had misplaced closing header tag and stray </header>
+    // But we restructured correctly above, but we also add safeguard for active page link
+    const currentPage = window.location.pathname.split("/").pop();
+    const navAnchors = document.querySelectorAll('.navbar ul li a');
+    navAnchors.forEach(anchor => {
+      if(anchor.getAttribute('href') === currentPage || (currentPage === "" && anchor.getAttribute('href') === "careers.html") || (anchor.getAttribute('href') === "careers.html" && window.location.pathname.includes("careers"))) {
+        anchor.style.color = "#60a5fa";
+      }
+    });
+    
+    // Smooth scroll for anchor links from other pages (if any)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if(targetId !== "#" && targetId.length > 1) {
+          const targetEl = document.querySelector(targetId);
+          if(targetEl) {
+            e.preventDefault();
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+    
+    // Form validation enhancement: ensure file input is not empty for better UX (optional)
+    const careerForm = document.querySelector('form[name="career"]');
+    if(careerForm) {
+      careerForm.addEventListener('submit', function(e) {
+        const fileInput = careerForm.querySelector('input[type="file"]');
+        const position = careerForm.querySelector('select[name="position"]').value;
+        if(!position) {
+          e.preventDefault();
+          alert('Please select a position before applying.');
+          return;
+        }
+        // Optionally check file but not required (some candidates may not have resume ready, but we'll encourage)
+        if(fileInput && fileInput.files.length === 0) {
+          const confirmSubmit = confirm('You haven\'t uploaded a resume. Are you sure you want to submit without resume? You can attach later if needed.');
+          if(!confirmSubmit) {
+            e.preventDefault();
+          }
+        }
+      });
+    }
+  })();
 </script>
+<!-- Ensure netlify forms work: note that data-netlify="true" is set, and also action is not required because netlify detects form -->
+<!-- Include a fix for favicon fallback in case logo.png missing -->
 </body>
 </html>
