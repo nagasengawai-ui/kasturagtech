@@ -155,11 +155,12 @@ display:block;
 
 .navbar{
 position:absolute;
-top:80px;
+top:85px;
 left:-100%;
 width:100%;
 background:#0f172a;
-transition:.3s;
+transition:0.3s ease;
+padding:20px 0;
 }
 
 .navbar.active{
@@ -168,15 +169,15 @@ left:0;
 
 .navbar ul{
 flex-direction:column;
-padding:20px;
-text-align:center;
+align-items:center;
+gap:20px;
 }
 
 .hero h1{
 font-size:2.5rem;
 }
-}
 
+}
 .benefit{
 background:white;
 padding:25px;
@@ -242,15 +243,7 @@ text-align:center;
 padding:30px;
 }
 
-@media(max-width:768px){
 
-.hero h1{
-font-size:2.5rem;
-}
-
-.navbar{
-display:none;
-}
 
 }
 </style>
@@ -265,17 +258,21 @@ display:none;
   </a>
 
   <div class="fas fa-bars" id="menu-btn"></div>
-
+</header>
 <nav class="navbar">
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#service">Services</a></li>
-    <li><a href="/#portfolio">Portfolio</a></li>
-    <li><a href="/careers.html">Careers</a></li>
-    <li><a href="/#contact">Contact</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#service">Services</a></li>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
   </ul>
 </nav>
+
+</header>
+
+<section class="hero">
 <section class="hero">
 <div>
 <h1>Join Kasturag Tech</h1>
