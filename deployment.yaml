@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kasturagtech-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kasturagtech
+  template:
+    metadata:
+      labels:
+        app: kasturagtech
+    spec:
+      containers:
+      - name: kasturagtech
+        image: kasturagtech:v1
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
