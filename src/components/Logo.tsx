@@ -9,7 +9,7 @@ interface LogoProps {
 export default function Logo({
   className = '',
   variant = 'full',
-  height = 36,
+  height = 43,
 }: LogoProps) {
   return (
     <img
