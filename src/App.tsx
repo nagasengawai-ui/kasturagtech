@@ -157,7 +157,7 @@ export default function App() {
             <img
               src="/images/founder.png"
               alt="Nagasen Gawai - Founder and CEO of Kasturag Tech"
-              className="w-72 h-80 sm:w-80 sm:h-96 object-cover rounded-[1.5rem]"
+              className="w-50 h-60 sm:w-80 sm:h-96 object-cover rounded-[1.5rem]"
             />
           </div>
 
