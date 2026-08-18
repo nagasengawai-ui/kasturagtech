@@ -50,7 +50,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
           className="flex items-center cursor-pointer group"
           id="logo-container"
         >
-          <Logo height={46} className="group-hover:scale-[1.02] transition-all duration-300" />
+          <Logo height={60} className="group-hover:scale-[1.02] transition-all duration-300" />
         </div>
 
         {/* Desktop Navigation */}
