@@ -140,6 +140,84 @@ export default function App() {
             </div>
 
             <Testimonials />
+            {/* Founder & CEO Section */}
+<section className="py-24 bg-slate-50 border-y border-slate-100">
+  <div className="mx-auto max-w-7xl px-6 md:px-12">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+
+      {/* Founder Image */}
+      <div className="flex justify-center lg:justify-start">
+        <div className="relative">
+
+          {/* Decorative glow */}
+          <div className="absolute -inset-6 rounded-[2rem] bg-blue-200/40 blur-3xl" />
+
+          {/* Image card */}
+          <div className="relative overflow-hidden rounded-[2rem] bg-white p-2 shadow-2xl border border-slate-200">
+            <img
+              src="/images/founder.png"
+              alt="Nagasen Gawai - Founder and CEO of Kasturag Tech"
+              className="w-72 h-80 sm:w-80 sm:h-96 object-cover rounded-[1.5rem]"
+            />
+          </div>
+
+          {/* Founder badge */}
+          <div className="absolute -bottom-5 -right-5 sm:right-[-25px] bg-slate-950 text-white rounded-2xl px-5 py-4 shadow-xl border border-slate-800">
+            <p className="text-xs text-blue-400 font-bold uppercase tracking-wider">
+              Founder & CEO
+            </p>
+            <p className="text-sm font-semibold mt-1">
+              Kasturag Tech
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Founder Content */}
+      <div>
+        <span className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider mb-5">
+          Leadership
+        </span>
+
+        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight mb-4">
+          Meet the Founder
+        </h2>
+
+        <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
+          Nagasen Gawai
+        </h3>
+
+        <p className="text-blue-600 text-lg font-semibold mb-6">
+          Founder & CEO, Kasturag Tech
+        </p>
+
+        <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-5">
+          I founded Kasturag Tech with a vision to build reliable,
+          secure and innovative technology solutions that help businesses
+          transform and grow in the digital era.
+        </p>
+
+        <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
+          Our focus is simple — combine modern technology, strong engineering
+          and a customer-first approach to create digital solutions that
+          deliver real business value.
+        </p>
+
+        {/* Signature / Quote */}
+        <div className="border-l-4 border-blue-500 pl-5">
+          <p className="text-slate-800 font-semibold italic">
+            "Build with purpose. Solve with technology. Grow with trust."
+          </p>
+          <p className="text-sm text-slate-500 mt-2">
+            — Nagasen Gawai
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
             {/* Premium CTA banner */}
             <section className="py-24 bg-slate-950 text-white relative overflow-hidden px-6 sm:px-12">
